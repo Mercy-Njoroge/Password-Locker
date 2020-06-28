@@ -165,3 +165,62 @@ Use these short codes to get around''')
                 print("\n")
                 print("Password Locker has no current user.\n    Be the first user :)")
                 print("\n")
+
+                  elif short_code == 'lg':
+            '''
+            Logs in the user into their Password Locker account
+            '''
+            print("\n")
+            print("Log into Password Locker Account")
+            print("Enter the user name")
+            user_name = input()
+
+            print("Enter the password")
+            user_password = input()
+
+            if user_log_in(user_name,user_password) == None:
+                print("\n")
+                print("Please try again or create an account")
+                print("\n")
+
+            else:
+
+                user_log_in(user_name,user_password)
+                print("\n")
+                print(f'''{user_name} welcome to your Credentials\n
+                Use these short codes to get around''')
+
+                while True:
+                    '''
+                    Loop to run functions after logging in
+                    '''
+                    print('''  Short codes:
+        cc - add a credential \n
+        dc - display credentials \n
+        cg - create a credential with a generate password \n
+        ex - exit Credentials''')
+
+          short_code = input().lower()
+
+                    if short_code == 'cc':
+                        '''
+                        Creating a Credential
+                        '''
+
+                        print("\n")
+                        print("New Credential")
+                        print("-"*10)
+
+                        print("Name of the credential ...")
+                        credential_name = input()
+
+                        print("Password of the credential ...")
+                        credential_password = input()
+
+                        # Create and save new user
+                        save_credentials( create_credentail( user_password, credential_name, credential_password) )
+
+                        print("\n")
+                        print(f"Credentials for {credential_name} have been created and saved")
+                        print("\n")
+
