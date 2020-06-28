@@ -92,3 +92,14 @@ def display_credentials(password):
     '''
 
     return Credential.display_credential(password)
+
+def create_generated_password(name):
+    '''
+    Function that generates a password for the user 
+
+    Args:
+        name : the name of the account
+    '''
+    password = Credential.generate_password()
+
+    return password
