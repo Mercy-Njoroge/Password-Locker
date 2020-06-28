@@ -14,7 +14,7 @@ class TestCredential(unittest.TestCase):
         Set up method to run before each test case
         '''
 
-        # Create credential object
+        
         self.new_credential = Credential("Nyugi","Gmail","kenya1")
 
     def tearDown(self):
@@ -73,12 +73,34 @@ class TestCredential(unittest.TestCase):
         
         self.new_credential.save_credential()
 
-        test_credential = Credential("doe2","Facebook","facebook17")
+        test_credential = Credential("Nyugi2","Facebook","kenyan12")
 
         test_credential.save_credential()
 
-        test_credential = Credential("doe2","Yahoo","yahoo17")
+        test_credential = Credential("Nyugi2","Gmail","kenya1")
 
         test_credential.save_credential()
         
-        self.assertEqual( len(Credential.display_credential("doe2")) , 2 )
+        self.assertEqual( len(Credential.display_credential("Nyugi2")) , 2 )
+
+            def test_credential_exist(self):
+        
+        '''
+        Test to check if we can return a boolean if we can't find the credential
+        '''
+
+        
+        self.new_credential.save_credential()
+
+        test_credential = Credential("Nyugi2","Facebook","kenyan12")
+
+        test_credential.save_credential()
+        
+        
+        credential_exists = Credential.credential_exist("Facebook")
+        
+        self.assertTrue(credential_exists)
+        
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
