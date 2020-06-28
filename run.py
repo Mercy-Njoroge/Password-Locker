@@ -125,3 +125,15 @@ Use these short codes to get around''')
 
     
         short_code = input().lower()
+
+  if short_code == 'cu':
+            '''
+            Creating a Password Locker account
+            '''
+
+            print("\n")
+            print("New Password Locker Account")
+            print("-"*10)
+
+            print("User name ...")
+            user_name = input()
