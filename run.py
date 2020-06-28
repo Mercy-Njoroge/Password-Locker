@@ -66,7 +66,7 @@ def create_credentail(user_password, name, password):
 
     return new_credentail
 
-    def save_credentials(credential):
+def save_credentials(credential):
     '''
     Function to save a credential
 
@@ -75,3 +75,13 @@ def create_credentail(user_password, name, password):
     '''
 
     credential.save_credential()
+
+def check_existing_credentials(name):
+    '''
+    Function that checks if a user credential name already exists
+
+    Args:
+        name : the credential name
+    '''
+
+    return Credential.credential_exist(name)
