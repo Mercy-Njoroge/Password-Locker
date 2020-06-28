@@ -20,3 +20,11 @@ def __init__(self, user_password, credential_name, credential_password):
         self.user_password = user_password
         self.credential_name = credential_name
         self.credential_password = credential_password
+
+def save_credential(self):
+        '''
+        Method that saves a user's credentials to credential list
+        '''
+        Credential.credential_list.append(self)
+
+        
