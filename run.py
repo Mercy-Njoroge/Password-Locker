@@ -51,3 +51,17 @@ def display_users():
     '''
 
     return User.display_user()  
+
+    def create_credentail(user_password, name, password):
+    '''
+    Function to create a credential 
+
+    Args:
+        user_password : the password for Password Locker
+        name : the name of the account 
+        password : the password for the account
+    '''
+
+    new_credentail = Credential(user_password,name,password)
+
+    return new_credentail
