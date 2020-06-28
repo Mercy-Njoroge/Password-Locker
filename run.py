@@ -45,3 +45,9 @@ def user_log_in(name, password):
     log_in = User.log_in(name, password)
     if log_in != False:
         return User.log_in(name, password)
+def display_users():
+    '''
+    Function that returns all the saved users 
+    '''
+
+    return User.display_user()  
