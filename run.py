@@ -137,3 +137,31 @@ Use these short codes to get around''')
 
             print("User name ...")
             user_name = input()
+
+             print("Password ...")
+            user_password = input()
+
+            
+            save_users( create_user( user_name, user_password) )
+
+            print("\n")
+            print(f"{user_name} welcome to Password Locker")
+            print("\n")
+
+            elif short_code == 'du':
+            '''
+            Display the names of the current users 
+            '''
+
+            if display_users():
+                print("\n")
+                print("Here are the current users of Password Locker")
+                print("-"*10)
+
+                for user in display_users():
+                    print(f"{user.user_name}")
+                    print("-"*10)
+            else:
+                print("\n")
+                print("Password Locker has no current user.\n    Be the first user :)")
+                print("\n")
