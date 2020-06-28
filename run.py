@@ -256,3 +256,37 @@ Use these short codes to get around''')
                         print("Name of the credential ...")
                         credential_name = input()
 
+   save_credentials( Credential(user_password, credential_name, (create_generated_password(credential_name)) ) )
+                        print("\n")
+                        print(f"Credentials for {credential_name} have been created and saved")
+                        print("\n")
+
+                    elif short_code == 'ex':
+                        print(f"See you later {user_name}")
+                        print("\n")
+                        break
+
+                    else:
+                        print("\n")
+                        print(f'''{short_code} does not compute.
+    Please use the short codes''')
+                        print("\n")
+
+        elif short_code == 'ex':
+            '''
+            Exit Password Locker
+            '''
+            print("\n")
+            print("Bye .....")
+
+            break
+
+        else:
+            print("\n")
+            print(f'''Come again, what's {short_code}?
+    Please use the short codes''')
+            print("\n")
+
+if __name__ == '__main__':
+    main()
+
