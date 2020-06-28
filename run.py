@@ -13,3 +13,13 @@ def create_user(name, password):
     new_user = User(name,password)
 
     return new_user
+
+def save_users(user):
+    '''
+    Function to save a user account
+
+    Args:
+        user : the user account to be saved
+    '''
+
+    user.save_user()
