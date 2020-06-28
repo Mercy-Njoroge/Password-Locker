@@ -8,3 +8,11 @@ class TestCredential(unittest.TestCase):
     Args:
         unittest.TestCase : Test case class that helps create test cases
     '''
+
+       def setUp(self):
+        '''
+        Set up method to run before each test case
+        '''
+
+        # Create credential object
+        self.new_credential = Credential("Nyugi","Kenya","kenya1")
