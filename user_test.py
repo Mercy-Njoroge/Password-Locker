@@ -38,5 +38,14 @@ class TestUser(unittest.TestCase):
         Test case to test if you can save multiple objects to user list
         '''
 
+        self.new_user.save_user()
+
+        test_user = User("Jossie","Ngat")
+
+        test_user.save_user()
+
+        self.assertEqual( len(User.user_list), 2)
+        
+
 if __name__ ==  '__main__':
     unittest.main()
