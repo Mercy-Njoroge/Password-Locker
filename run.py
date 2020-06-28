@@ -224,3 +224,35 @@ Use these short codes to get around''')
                         print(f"Credentials for {credential_name} have been created and saved")
                         print("\n")
 
+  elif short_code == 'dc':
+                        '''
+                        Displaying credential name and password
+                        '''
+
+                        if display_credentials(user_password):
+                            print("\n")
+                            print(f"{user_name}\'s credentials")
+                            print("-"*10)
+
+                            for credential in display_credentials(user_password):
+                                print(f"Account ..... {credential.credential_name}")
+                                print(f"Password .... {credential.credential_password}")
+                                print("-"*10)
+
+                        else:
+                            print("\n")
+                            print("You have no credentials")
+                            print("\n")
+
+                    elif short_code == 'cg':
+                        '''
+                        Creating a credential with a generated password
+                        '''
+
+                        print("\n")
+                        print("New Credential")
+                        print("-"*10)
+
+                        print("Name of the credential ...")
+                        credential_name = input()
+
