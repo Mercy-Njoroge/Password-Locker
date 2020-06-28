@@ -58,3 +58,23 @@ def display_credential(cls,password):
                 user_credential_list.append(credential)
 
         return user_credential_list
+
+          @classmethod
+    def credential_exist(cls, name):
+        
+        '''
+        Method that checks if a credential exists in the credential list
+        
+        Args:
+            name: name of the credential to search
+            
+        Returns:
+            Boolean: true/false depending if the contact exists
+            
+        '''
+        
+        for credential in cls.credential_list:
+            if credential.credential_name == name:
+                return True
+            
+        return False
