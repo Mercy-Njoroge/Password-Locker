@@ -103,3 +103,11 @@ def create_generated_password(name):
     password = Credential.generate_password()
 
     return password
+
+def main():
+    '''
+    Function running the Password Locker app
+    '''
+
+    print('''Welcome to Password Locker \n
+Use these short codes to get around''')
