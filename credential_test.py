@@ -41,3 +41,17 @@ class TestCredential(unittest.TestCase):
         self.new_credential.save_credential()
 
         self.assertEqual( len(Credential.credential_list), 1 )
+
+    def test_save_multiple_credentials(self):
+        '''
+        Test case to test if you can save multiple objects to credential list
+        '''
+
+        
+        self.new_credential.save_credential()
+
+        test_credential = Credential("Nyugi2","Facebook","kenyan12")
+
+        test_credential.save_credential()
+
+        self.assertEqual( len(Credential.credential_list), 2)
