@@ -52,7 +52,7 @@ def display_users():
 
     return User.display_user()  
 
-    def create_credentail(user_password, name, password):
+def create_credentail(user_password, name, password):
     '''
     Function to create a credential 
 
@@ -65,3 +65,13 @@ def display_users():
     new_credentail = Credential(user_password,name,password)
 
     return new_credentail
+
+    def save_credentials(credential):
+    '''
+    Function to save a credential
+
+    Args:
+        credential : the credential to be saved
+    '''
+
+    credential.save_credential()
