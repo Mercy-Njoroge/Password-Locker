@@ -23,3 +23,13 @@ def save_users(user):
     '''
 
     user.save_user()
+
+def check_existing_users(name):
+    '''
+    Function that checks if a user account name already exists
+
+    Args:
+        name : the user account name
+    '''
+
+    return User.user_exist(name)
