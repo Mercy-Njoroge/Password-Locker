@@ -64,3 +64,21 @@ class TestCredential(unittest.TestCase):
         generated_password = self.new_credential.generate_password()
 
         self.assertEqual( len(generated_password), 8 ) 
+
+    def test_display_credential(self):
+        '''
+        Test case to test if a user can see a list of all the credentials saved
+        '''
+
+        
+        self.new_credential.save_credential()
+
+        test_credential = Credential("doe2","Facebook","facebook17")
+
+        test_credential.save_credential()
+
+        test_credential = Credential("doe2","Yahoo","yahoo17")
+
+        test_credential.save_credential()
+        
+        self.assertEqual( len(Credential.display_credential("doe2")) , 2 )
