@@ -10,17 +10,22 @@ class TestUser(unittest.TestCase):
         unittest.TestCase : Test case class that helps create test cases
     '''
 
-      def setUp(self):
-        '''
-        Set up method to run before each test case
-        '''
+    def setUp(self):
+    '''
+    Set up method to run before each test case
+    '''
 
-        self.new_user = User("James","Nyugi")
+    self.new_user = User("James","Nyugi")
 
-        def test_init(self):
-        '''
-        Test case to test if the object is initialised properly
-        '''
+    def test_init(self):
+    '''
+    Test case to test if the object is initialised properly
+    '''
 
-        self.assertEqual( self.new_user.user_name, "James" )
-        self.assertEqual( self.new_user.user_password, "Nyugi" )
+    self.assertEqual( self.new_user.user_name, "James" )
+    self.assertEqual( self.new_user.user_password, "Nyugi" )
+
+    def test_save_user(self):
+        '''
+        Test case to test if the user object is saved into the user list
+        '''
