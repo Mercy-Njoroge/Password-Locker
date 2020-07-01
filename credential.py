@@ -27,7 +27,7 @@ def save_credential(self):
         '''
         Credential.credential_list.append(self)
 
-        @classmethod
+@classmethod
 def generate_password(cls):
         '''
         Method that generates a random alphanumeric password
@@ -43,7 +43,7 @@ def generate_password(cls):
         
         return password
 
-        @classmethod
+@classmethod
 def display_credential(cls,password):
         '''
         Method that returns the credential list
@@ -59,8 +59,8 @@ def display_credential(cls,password):
 
         return user_credential_list
 
-          @classmethod
-    def credential_exist(cls, name):
+@classmethod
+def credential_exist(cls, name):
         
         '''
         Method that checks if a credential exists in the credential list
